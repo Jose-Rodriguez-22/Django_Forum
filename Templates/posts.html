@@ -17,9 +17,13 @@
     <ul>
       {% for post in post %}
       <li>
-        <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %}" />
+        <img
+          class="menu_icon js-menu-icon"
+          src="{% static 'img/option.png' %}"
+        />
         <div class="menu">
           <a href="/delete/{{ post.id }}/">Delete</a>
+          <a href="/edit/{{ post.id }}/">Edit</a>
         </div>
         <div class="logo">
           <img src="{% static 'img/user.png' %}" />
@@ -29,6 +33,10 @@
           <div class="datetime">{{ post.created_at }}</div>
           <p>{{ post.body }}</p>
           <!-- <a href="/delete/{{ post.id }}/">delete</a> -->
+          <!-- add browse file submit button here-->
+          <div class="like_button">
+            <img src="{% static 'img/heart.png' %}" />
+          </div>
         </div>
       </li>
       {% endfor %}

@@ -82,6 +82,9 @@ Post
   flex-basis: 85%;
 }
 
+.posts .like_button {
+}
+
 .posts li .name_body .name {
   font-weight: bold;
 }
